@@ -5,5 +5,5 @@ SELECT
     type
 FROM {{ ref("events_clean") }} AS e
 LEFT JOIN {{ ref("event_types") }} AS t
-{#    ON e.type_id = t.type_id#}
+--    ON e.type_id = t.type_id
     USING (type_id)
